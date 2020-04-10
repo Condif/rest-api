@@ -32,3 +32,7 @@ app.get("/users: age", (req, res) => {
         res.send(foundUser)
     }
 })
+
+app.listen(3000, 'localhost', () => {
+    console.log('Server is up and running on http://localhost:3000');
+})
