@@ -1,13 +1,27 @@
 const express = require('express')
 const app = express()
 
-const users = [
+const shoes = [
     {
-        name: "Victor",
-        age: 28
+        brand: "Adidas",
+        color: "White",
+        size: "41",
+        Price: 2300
     }, {
-        name: "David",
-        age: 30
+        brand: "Nike",
+        color: "Blue",
+        size: "40",
+        Price: 2200
+    }, {
+        brand: "Reebok",
+        color: "Red",
+        size: "39",
+        Price: 2100
+    }, {
+        brand: "Vans",
+        color: "Green",
+        size: "38",
+        Price: 2000
     }
 ]
 
@@ -21,28 +35,29 @@ app.get('/', (req, res) => {
     res.send('Hello world')
 })
 
-// When request is made on /users(the endpoint) respond with users as a json string in callback function
-app.get("/users", (req, res) => {
-    res.json(users)
+// When request is made on /shoes(the endpoint) respond with shoes as a json string in callback function
+app.get("/shoes", (req, res) => {
+    res.json(shoes)
 })
-// i /users:age är age också ett requirement för att gå in i funktionen då den kollar om age = en age som finns i listan users
-app.get("/users:age", (req, res) => {
-    const foundUser = users.find((user) => {
-        //Om ett index users har samma nummer som ett i listan som finns på servern sätt foundUser till true annars false
-        if (user.age.toString() === req.params.age) {
+// i /shoes:price är price också ett requirement för att gå in i funktionen då den kollar om price = en price som finns i listan shoes
+app.get("/shoes:price", (req, res) => {
+    const foundShoe = shoes.find((shoe) => {
+        //Om ett index shoes har samma nummer som ett i listan som finns på servern sätt foundShoe till true annars false
+        if (user.price.toString() === req.params.price) {
             return true
         } else {
             return false
         }
     })
 
-    if (!foundUser) {
+    if (!foundShoe) {
         res.status(404).send()
     } else {
-        //Send foundUsers to /users foundUser = listan med users som skickas om callback sätter foundUser till true
-        res.send(foundUser)
+        //Send foundshoes to /shoes foundShoe = listan med shoes som skickas om callback sätter foundShoe till true
+        res.send(foundShoe)
     } 
 })
 
+const hostname = 'localhost'
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+app.listen(port, () => console.log(`Listening on   http://${hostname}:${port}`));

@@ -1,6 +1,6 @@
-fetch("http://localhost:3000/users").then((response) => {
+fetch("http://localhost:3000/shoes").then((response) => {
    //skicka tillbaka parsad body
     return response.json()
-}).then((users) => {
-    console.log(users);
+}).then((shoes) => {
+    console.log(shoes);
 })
