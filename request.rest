@@ -1,0 +1,18 @@
+// Rest client gör exakt samma sak som en fetch fast http anrop och får svar tillbaka
+
+
+GET http://localhost:3000/shoes
+
+
+GET http://localhost:3000/shoes/1
+
+
+POST http://localhost:3000/shoes
+Content-Type: application/json
+
+{
+    "brand": "Adidas",
+    "color": "White",
+    "size": "41",
+    "price": 2300
+}
