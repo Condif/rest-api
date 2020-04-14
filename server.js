@@ -6,22 +6,22 @@ const shoes = [
         brand: "Adidas",
         color: "White",
         size: "41",
-        Price: 2300
+        price: 2300
     }, {
         brand: "Nike",
         color: "Blue",
         size: "40",
-        Price: 2200
+        price: 2200
     }, {
         brand: "Reebok",
         color: "Red",
         size: "39",
-        Price: 2100
+        price: 2100
     }, {
         brand: "Vans",
         color: "Green",
         size: "38",
-        Price: 2000
+        price: 2000
     }
 ]
 
@@ -33,6 +33,8 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     res.send('Hello world')
+    console.log('get /');
+    
 })
 
 // When request is made on /shoes(the endpoint) respond with shoes as a json string in callback function
@@ -42,7 +44,7 @@ app.get("/shoes", (req, res) => {
 // i /shoes:price är price också ett requirement för att gå in i funktionen då den kollar om price = en price som finns i listan shoes
 app.get("/shoes:price", (req, res) => {
     const foundShoe = shoes.find((shoe) => {
-        //Om ett index shoes har samma nummer som ett i listan som finns på servern sätt foundShoe till true annars false
+        //Om ett index shoe har samma nummer som ett i listan som finns på servern sätt foundShoe till true annars false
         if (user.price.toString() === req.params.price) {
             return true
         } else {
