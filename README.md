@@ -12,7 +12,7 @@ eller
 CTRL+click port du själv lagt till ( http://localhost:port )
 
 ### Repo-länk:
-https://github.com/Condif/e-handel.git
+https://github.com/Condif/rest-api.git
 
 ## Shoe Api
 Hämta, lägg till, ta bort och ändra vilka skor som ska finnas i API:et.
