@@ -1,8 +1,6 @@
 const express = require('express')
 const app = express()
 
-//Video tid 
-
 const shoes = [
     {
         id: 1,
