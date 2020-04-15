@@ -3,9 +3,11 @@
 
 GET http://localhost:3000/shoes
 
+###
 
-GET http://localhost:3000/shoes/1
+GET http://localhost:3000/shoes/2
 
+###
 
 POST http://localhost:3000/shoes
 Content-Type: application/json
