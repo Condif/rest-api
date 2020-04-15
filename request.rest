@@ -1,20 +1,22 @@
 // Rest client gör exakt samma sak som en fetch fast http anrop och får svar tillbaka
 
-
+//Hämta alla skor
 GET http://localhost:3000/shoes
 
 ###
 
+//Hämta en sko
 GET http://localhost:3000/shoes/2
 
 ###
 
+//Lägg till en sko
 POST http://localhost:3000/shoes
 Content-Type: application/json
 
 {
+    "id": 5,
     "brand": "Adidas",
-    "color": "White",
     "size": "41",
     "price": 2300
 }
