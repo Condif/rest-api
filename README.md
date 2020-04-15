@@ -1,4 +1,5 @@
-# rest-api
+## Shoe Api
+Hämta, lägg till, ta bort och ändra vilka skor som ska finnas i API:et.
 
 ### Instruktioner för att köra:
 1. npm i
@@ -14,8 +15,6 @@ CTRL+click port du själv lagt till ( http://localhost:port )
 ### Repo-länk:
 https://github.com/Condif/rest-api.git
 
-## Shoe Api
-Hämta, lägg till, ta bort och ändra vilka skor som ska finnas i API:et.
 
 ### Uppfyllda krav
 
