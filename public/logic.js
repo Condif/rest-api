@@ -20,16 +20,16 @@ function printAllShoes(shoes) {
     shoes.forEach(shoe => {
         // Skapa html överskrift för varje egenskap och fyll innerTexten med texten i objekt med det namnet ex brand
         let shoeId = document.createElement("h4")
-        shoeId.innerText = shoe.id
+        shoeId.innerText = "Id: " + shoe.id
         
         let shoeBrand = document.createElement("h4")
-        shoeBrand.innerText = shoe.brand
+        shoeBrand.innerText = "Brand: " + shoe.brand
 
         let shoeSize = document.createElement("h4")
-        shoeSize.innerText = shoe.size
+        shoeSize.innerText = "Size: " + shoe.size
 
         let shoePrice = document.createElement("h4")
-        shoePrice.innerText = shoe.price
+        shoePrice.innerText = "Price: " + shoe.price
 
         //Adderar alla h4:or till shoeDiv
 
@@ -37,8 +37,8 @@ function printAllShoes(shoes) {
         let shoeDiv = document.createElement("div")
 
         // Använd appendChild för att få med all innerText när du adderar h4:or
-        shoeDiv.appendChild(shoeBrand)
         shoeDiv.appendChild(shoeId)
+        shoeDiv.appendChild(shoeBrand)
         shoeDiv.appendChild(shoeSize)
         shoeDiv.appendChild(shoePrice)
 
@@ -81,16 +81,16 @@ function printSpecificShoe(shoe) {
     if(shoe) {
          // Skapa html överskrift för varje egenskap och fyll innerTexten med texten i objekt med det namnet ex brand
          let shoeId = document.createElement("h4")
-         shoeId.innerText = shoe.id
+         shoeId.innerText = "Id: " + shoe.id
          
          let shoeBrand = document.createElement("h4")
-         shoeBrand.innerText = shoe.brand
+         shoeBrand.innerText = "Brand: " + shoe.brand
  
          let shoeSize = document.createElement("h4")
-         shoeSize.innerText = shoe.size
+         shoeSize.innerText = "Size: " + shoe.size
  
          let shoePrice = document.createElement("h4")
-         shoePrice.innerText = shoe.price
+         shoePrice.innerText = "Price: " + shoe.price
  
          //Appenda alla element in shoes objektet till specificShoeContainer
          specificShoeContainer.appendChild(shoeBrand)

@@ -1,3 +1,7 @@
+// Om du kör andra portar på annat än standard (3000)
+// ändra 3000 i länkarna till porten du kör servern på
+
+###
 // Rest client gör exakt samma sak som en fetch fast http anrop och får svar tillbaka
 
 //Hämta alla skor
@@ -16,7 +20,7 @@ Content-Type: application/json
 
 {
     "id": 5,
-    "brand": "Adidas",
-    "size": "41",
-    "price": 2300
+    "brand": "NewBrand",
+    "size": "38",
+    "price": 1900
 }

@@ -86,6 +86,6 @@ app.post('/shoes', (req, res) => {
 //Lägg till ett hostnamn + en port
 const hostname = 'localhost'
 
-// porten är det du manuellt ställt in(fungerar inte just nu) annars är den 3000 (standard)
+// porten är det du manuellt ställt in(Ex: terminal kommando $env:Port = 1234) annars är den 3000 (standard)
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on   http://${hostname}:${port}`));
