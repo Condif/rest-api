@@ -83,6 +83,32 @@ app.post('/shoes', (req, res) => {
     res.status(201).send()
 })
 
+
+// Delete shoe
+app.delete('/shoes/:shoeId', (req, res) => {
+    // Check if shoeId is in shoes
+    const foundShoe = shoes.find((shoe) => {
+        //Om ett index shoe har samma nummer som ett i listan som finns på servern sätt foundShoe till true annars false
+        if (shoe.id.toString() === req.params.shoeId) {   
+            // Skapa ny lista med shoes med alla element förutom det vi vill ta bort.    
+            res.json({shoes: shoes.filter(shoe => shoe.id.toString() !== req.params.shoeId)})
+            return true
+        } else {
+            return false
+        }
+    })
+
+    //Vad svaret blir beroende på vad find funktion hittar, hittar den undefined (false) sätts rests status till 404 inget svar
+    if (!foundShoe) {
+        res.status(400).json({ msg: `Shoe with id ${req.params.shoeId} could not be found in database`})
+    } else {
+        //Send foundshoes to /shoes foundShoe = listan med shoes som skickas om callback sätter foundShoe till true
+        res.status(200).send()
+        
+    } 
+})
+
+
 //Lägg till ett hostnamn + en port
 const hostname = 'localhost'
 

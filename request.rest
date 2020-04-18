@@ -24,3 +24,7 @@ Content-Type: application/json
     "size": "38",
     "price": 1900
 }
+
+###
+
+DELETE http://localhost:3000/shoes/4
