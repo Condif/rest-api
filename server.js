@@ -1,17 +1,3 @@
-// Krav för godkänt:
-
-// README.md fil. Den ska innehålla en titel,
-//  beskrivning av projektet, vilka krav som är uppfyllda,
-//  info om hur projektet byggs och körs samt en länk till GitHub repot.
-
-// Projektet innehåller minst 4 st. endpoints (GET, POST, PUT & DELETE för en resurs)
-// Samtliga endpoints skall kunna nås via en REST Client fil (.rest)
-// Datan som API:et hanterar sparas lokalt i serverfilen
-// Git & GitHub har använts
-// Projektmappen innehåller en README.md fil - (läs ovan för mer info)
-// Uppgiften lämnas in i tid!
-
-
 const express = require('express')
 const app = express()
 
