@@ -10,7 +10,7 @@ GET http://localhost:3000/shoes
 ###
 
 //Hämta en sko
-GET http://localhost:3000/shoes/2
+GET http://localhost:3000/shoes/1
 
 ###
 
@@ -27,4 +27,19 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/shoes/4
+DELETE http://localhost:3000/shoes/2
+
+
+###
+
+
+// Byt ut till annan sko
+PUT http://localhost:3000/update/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "brand": "putBrand",
+    "size": "37",
+    "price": 1800
+}
