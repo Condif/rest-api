@@ -27,6 +27,7 @@ Content-Type: application/json
 
 ###
 
+// Ta bort en sko
 DELETE http://localhost:3000/shoes/2
 
 
